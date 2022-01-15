@@ -141,6 +141,18 @@ class NADReceiver:
         """Execute Main.Model."""
         return self.exec_command('main', 'model', operator, value)
 
+    def main_listening_mode(self, operator: str, value: Optional[str] =None) -> Optional[str]:
+        """Execute Main.ListeningMode."""
+        return self.exec_command('main', 'listening_mode', operator, value)
+
+    def main_dirac(self, operator: str, value: Optional[str] =None) -> Optional[str]:
+        """Execute Main.Dirac."""
+        return self.exec_command('main', 'dirac', operator, value)
+
+    def main_vfd_display(self, operator: str, value: Optional[str] =None) -> Optional[str]:
+        """Execute Main.Vfd.Display."""
+        return self.exec_command('main', 'vfd_display', operator, value)
+
     def tuner_am_frequency(self, operator: str, value: Optional[str] =None) -> Optional[str]:
         """Execute Tuner.AM.Frequence."""
         return self.exec_command('tuner', 'am_frequency', operator, value)

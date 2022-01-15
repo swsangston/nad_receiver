@@ -61,6 +61,18 @@ CMDS: Dict[str, Dict[str, Dict[str, Union[str, Iterable[str]]]]] = {
                 {'cmd': 'Main.Model',
                  'supported_operators': ['?']
                  },
+            'vfd_display':
+                {'cmd': 'Main.VFD.Display',
+                 'supported_operators': ['=','?']
+                 },
+            'listening_mode':
+                {'cmd': 'Main.ListeningMode',
+                 'supported_operators': ['=','?']
+                 },
+            'dirac':
+                {'cmd': 'Main.Dirac',
+                 'supported_operators': ['=','?']
+                 },
         },
     'tuner':
         {
