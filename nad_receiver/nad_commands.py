@@ -73,6 +73,14 @@ CMDS: Dict[str, Dict[str, Dict[str, Union[str, Iterable[str]]]]] = {
                 {'cmd': 'Main.Dirac',
                  'supported_operators': ['=','?']
                  },
+            'bass':
+                {'cmd': 'Main.Bass',
+                 'supported_operators': ['+', '-', '=', '?']
+                 },
+            'treble':
+                {'cmd': 'Main.Treble',
+                 'supported_operators': ['+', '-', '=', '?']
+                 }
         },
     'tuner':
         {

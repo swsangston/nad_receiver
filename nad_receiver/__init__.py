@@ -153,6 +153,48 @@ class NADReceiver:
         """Execute Main.Vfd.Display."""
         return self.exec_command('main', 'vfd_display', operator, value)
 
+    def main_bass(self, operator: str, value: Optional[str] =None) -> Optional[float]:
+        """
+        Execute Main.Bass.
+
+        Returns float
+        """
+        if value is not None:
+            level = self.exec_command('main', 'bass', operator, str(value))
+        else:
+            level = self.exec_command('main', 'bass', operator)
+
+        if level is None:
+            return None
+        try:
+            res = float(level)
+            return res
+        except (ValueError):
+            pass
+
+        return None
+
+    def main_treble(self, operator: str, value: Optional[str] =None) -> Optional[float]:
+        """
+        Execute Main.Treble.
+
+        Returns float
+        """
+        if value is not None:
+            level = self.exec_command('main', 'treble', operator, str(value))
+        else:
+            level = self.exec_command('main', 'treble', operator)
+
+        if level is None:
+            return None
+        try:
+            res = float(level)
+            return res
+        except (ValueError):
+            pass
+
+        return None
+
     def tuner_am_frequency(self, operator: str, value: Optional[str] =None) -> Optional[str]:
         """Execute Tuner.AM.Frequence."""
         return self.exec_command('tuner', 'am_frequency', operator, value)
